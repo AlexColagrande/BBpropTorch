@@ -1,0 +1,18 @@
+import sys
+import os
+
+# Append the specific directory to sys.path for relative imports
+sys.path.append('/Users/alexcolagrande/Desktop/Python/BGradTorch')
+
+from utils import load_dictionary
+
+# Define the base path to the pickles directory
+base_file_path = '/Users/alexcolagrande/Desktop/Python/BGradTorch/pickles'
+
+# Construct the full path to the pickle file
+file_path = os.path.join(base_file_path, 'Dstate_dict_BP.pkl')
+
+# Load the dictionary
+Dstate_dict_BP = load_dictionary(file_path)
+print("This is Dstate_dict_BP:")
+print(Dstate_dict_BP)
